@@ -1,4 +1,4 @@
-import { Quotes } from "../@types/types";
+import { AllQuotes } from "../@types/types";
 import {
   FETCH_QUOTES_REQUEST,
   FETCH_QUOTES_SUCCESS,
@@ -11,7 +11,7 @@ export interface FetchQuotesRequest {
 
 export interface FetchQuotesSuccess {
   type: typeof FETCH_QUOTES_SUCCESS;
-  payload: Quotes;
+  payload: AllQuotes;
 }
 
 export interface FetchQuotesFailure {
@@ -22,4 +22,5 @@ export interface FetchQuotesFailure {
 export type QuotesActions =
   | FetchQuotesRequest
   | FetchQuotesSuccess
-  | FetchQuotesFailure;
+  | FetchQuotesFailure
+  | any;

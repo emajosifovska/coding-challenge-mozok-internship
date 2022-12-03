@@ -9,3 +9,5 @@ const rootReducer = combineReducers({
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
+
+export type Store = ReturnType<typeof rootReducer>;

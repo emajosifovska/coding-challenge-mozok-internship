@@ -1,9 +1,5 @@
-import { Quotes } from "../@types/types";
-import {
-  FetchQuotesSuccess,
-  FetchQuotesFailure,
-  QuotesActions,
-} from "../action-types/quotesActionsTypes";
+import { AllQuotes } from "../@types/types";
+import { QuotesActions } from "../action-types/quotesActionsTypes";
 import {
   FETCH_QUOTES_REQUEST,
   FETCH_QUOTES_SUCCESS,
@@ -12,13 +8,15 @@ import {
 
 const initialState = {
   loadingQuotes: false,
-  quotes: undefined,
+  quote: {
+    quotes: [],
+  },
   error: "",
 };
 
 interface State {
   loadingQuotes: boolean;
-  quotes?: Quotes;
+  quote?: AllQuotes;
   error?: string;
 }
 
@@ -31,13 +29,13 @@ const quotesReducer = (state: State = initialState, action: QuotesActions) => {
     case FETCH_QUOTES_SUCCESS:
       return {
         loadingQuotes: false,
-        quotes: (action as FetchQuotesSuccess).payload,
+        quote: action.payload,
       };
     case FETCH_QUOTES_FAILURE:
       return {
         ...state,
         loadingQuotes: false,
-        error: (action as FetchQuotesFailure).payload,
+        error: action.payload,
       };
     default:
       return state;

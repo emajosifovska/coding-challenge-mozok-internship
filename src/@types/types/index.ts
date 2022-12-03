@@ -1,10 +1,8 @@
-export type Quotes = {
-  q: "string";
-  a: "string";
-  c: "string";
+export type AllQuotes = {
+  quotes: Quote[];
 };
 
-export type RandomQuote = {
-  q: string;
-  a: string;
+export type Quote = {
+  quote: "string";
+  author: "string";
 };
