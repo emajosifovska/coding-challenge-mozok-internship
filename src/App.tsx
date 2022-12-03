@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Quotes from "./pages/Quotes";
-import RandomQuote from "./pages/RandomQuote";
+import RandomFact from "./pages/RandomFact";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Quotes />} />
           <Route path="/quotes" element={<Quotes />} />
-          <Route path="/random-quote" element={<RandomQuote />} />
+          <Route path="/random-quote" element={<RandomFact />} />
         </Routes>
       </Router>
     </>

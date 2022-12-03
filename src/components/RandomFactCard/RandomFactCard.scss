@@ -1,0 +1,23 @@
+@import "../../styles/colors.scss";
+
+.randomFactContainer {
+  background-color: $lightMidnightBlue;
+  color: $lightGray;
+  width: 600px;
+  height: 250px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > span {
+    color: $mintGreen;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../styles/colors.scss";
+
+.randomButton {
+  background: $lightMidnightBlue;
+  color: $lightGray;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 30px 0;
+
+  & > svg {
+    margin-left: 10px;
+
+    & > path {
+      fill: $mintGreen;
+    }
+  }
+}

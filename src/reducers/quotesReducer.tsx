@@ -24,10 +24,12 @@ const quotesReducer = (state: State = initialState, action: QuotesActions) => {
   switch (action.type) {
     case FETCH_QUOTES_REQUEST:
       return {
+        ...state,
         loadingQuotes: true,
       };
     case FETCH_QUOTES_SUCCESS:
       return {
+        ...state,
         loadingQuotes: false,
         quote: action.payload,
       };

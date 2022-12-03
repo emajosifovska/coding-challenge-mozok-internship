@@ -1,4 +1,6 @@
-.container {
+@import "../styles/colors.scss";
+
+.quotesContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,4 +17,14 @@
     align-items: center;
     margin: 0 auto;
   }
+}
+
+.factContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 800px;
 }
